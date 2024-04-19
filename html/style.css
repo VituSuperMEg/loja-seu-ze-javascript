@@ -1,0 +1,77 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background : #f0f0f0;
+}
+header {
+  background : #3b82f6;
+  padding : 40px;
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  gap: 50px;
+}
+header ul li {
+  list-style-type : none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+header ul li:hover {
+  transition: color .2s ease-in-out;
+  color : #000;
+}
+header h1 {
+  color : #fff;
+}
+.container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content : center;
+}
+.card{
+  background : #fff;
+  height : 600px;
+  width : 500px;
+  margin : 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius : 30px;
+}
+.card img {
+  mix-blend-mode: multiply;
+  width: 350px;
+  height: 350px;
+  object-fit : cover;
+}
+.card .precoDesconto {
+  display: flex;
+  gap : 5px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+#carrinho {
+  background: #ef4444;
+  position: relative;
+  top: -10px;
+  left : -75px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* visibility : ; */
+  color: #fff;
+}
