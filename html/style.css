@@ -11,8 +11,11 @@ header {
   background : #3b82f6;
   padding : 40px;
   display : flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  position:fixed;
+  z-index: 9999;
 }
 header ul {
   display: flex;
@@ -61,7 +64,6 @@ header h1 {
   justify-content: flex-start;
   align-items: center;
 }
-// Parte Final
 #carrinho {
   background: #ef4444;
   position: relative;
