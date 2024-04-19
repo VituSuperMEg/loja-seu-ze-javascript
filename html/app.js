@@ -1,21 +1,28 @@
+
+// Primeira Parte
+
 const root = document.querySelector("#root");
+
+
+/* 
+ Final da Aula parte da criação de inserção de items ao carrinho
+*/
 const cart = [];
 const carrinho = document.querySelector("#carrinho");
 carrinho.innerHTML = "";
 
 function addCart(item) {
   cart.push(item);
-  updateCart(); // Atualiza o carrinho após adicionar o item
-}
-
-function updateCart() {
-  carrinho.style.visibility = "visible";
   carrinho.innerHTML = cart.length;
 }
 
+// Primeira Parte 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // api feita em bun
   const api = "http://localhost:3333/itens";
 
+  // Obter os itens 
   function getItens() {
     fetch(api)
       .then((response) => response.json())
@@ -34,14 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const preco = document.createElement("p");
           const desconto = document.createElement("span");
           const precoDesconto = document.createElement("section");
+
+          // Parte Final
           const button = document.createElement("button");
 
           button.innerHTML = "Adicionar ao carrinho";
           let btnEstilo =
-            "background : #3b82f6; width: 100%; border : none; padding: 10px; color: #fff; font-weight: bold; border-radius : 6px; margin-top : 5px;cursor: pointer";
-          // CSS Pelo JavaScript
+            "background : #3b82f6; width: 100%; border : none; padding: 10px; color: #fff; font-weight: bold; border-radius : 6px; margin-top : 5px;cursor: pointer"
           button.style.cssText = btnEstilo;
-
+          // Parte Final
           precoDesconto.innerHTML = "";
           precoDesconto.classList = "precoDesconto";
 
@@ -59,8 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
           container.append(nome);
           container.append(precoDesconto);
           container.append(imagem);
-          container.append(button);
 
+          // Parte Final
+          container.append(button);
           button.addEventListener("click", () => addCart(i));
 
           // Pai
